@@ -1,0 +1,800 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ZhangZhilinForm
+</name>
+</assembly>
+<members>
+<member name="F:ZhangZhilinForm.Variable.strOpenTargetForm">
+	<summary>
+ 主界面开启相关界面时，传递窗口名称变量
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.strActiveFrmNme">
+	<summary>
+ 当前活动窗口名
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.ChildFrmOffsetPoint">
+	<summary>
+ '各子界面在主界面中位置定位点
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bIsLoginFromOpen">
+	<summary>
+ 登陆界面是否打开
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.sLogin">
+	<summary>
+ 用户登陆变量
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.Variable.structLogin">
+	<summary>
+ 用户登陆结构体
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bIsEnableParModify">
+	<summary>
+ 参数允许修改标志位
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bolHomeOK">
+	<summary>
+ 设备初始化OK,可以启动运行
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bolRunning">
+	<summary>
+ 设备运行中标志
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bolPause">
+	<summary>
+ 设备暂停中标志
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bolStoping">
+	<summary>
+ 设备停止中标志
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.Variable.bolEmergency">
+	<summary>
+ 急停标志位
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ZhangZhilinForm.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ZhangZhilinForm.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:ZhangZhilinForm.FileRw.strFilePath">
+	<summary>
+ 文件路径变量
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.FileRw.CreatFilePath">
+	<summary>
+ 对路径进行赋值
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.FileRw.ReadDataBase(System.String,System.String,System.String,System.Int32,System.Int32,System.Data.DataSet@)">
+	<summary>
+ 读取数据库具体某行某列的值，并同时可返回读取到的Dataset对象
+ </summary>
+	<param name="strFilePahtName">文件路径带文件名</param>
+	<param name="strSheetName">表名</param>
+	<param name="intRowsNum">要读取的行：默认＝0</param>
+	<param name="intColumn">要读取的列：默认＝0</param>
+	<param name="RetDataSet">返回的DataSet对象</param>
+	<returns>返回读取到的内容</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.FileRw.ReadAllField(System.Data.DataSet,System.Int32,System.String)">
+	<summary>
+ 从DataSet中读取某一字段所有的内容
+ </summary>
+	<param name="DataSet">DataSet变量</param>
+	<param name="SheetNum">表序号</param>
+	<param name="DataField">字段名</param>
+	<returns>以数组形式返回读取到的内容</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.FileRw.WriteDataBase(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+功能：写数据库
+ </summary>
+	<param name="strFileFullPahtName">数据库所在的路径，带文件名</param>
+	<param name="strPassWord">数据库密码</param>
+	<param name="strSheetName">表名</param>
+	<param name="strRowsName">用来定位要修改数据的行名</param>
+	<param name="strRowsVaule">用来定位要修改数据的行名对应的值</param>
+	<param name="strFields">要修改数据所在的字段名</param>
+	<param name="strWriteValue">要定入的新值</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.FileRw.WriteDataBaseFromDataset(System.String,System.String,System.String,System.Data.DataSet)">
+	<summary>
+ 功能：将DataSet写回数据库
+ </summary>
+	<param name="strFilePahtName">数据库所在的路径，带文件名</param>
+	<param name="strPassWord">数据库密码</param>
+	<param name="strSheetName">表名</param>
+	<param name="FormDataSet">要写入的DataSet</param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.Card(System.Int32)">
+	<summary>
+ 返回轴对应的卡
+ </summary>
+	<param name="AxisNum">轴名:如S2_X等</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.Axis(System.Int32)">
+	<summary>
+ 返回轴对应的轴号
+ </summary>
+	<param name="AxisNum"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.ModMotionCard.dsAxisPar">
+	<summary>
+ 读取轴参数,读取到的轴参数DataSet
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.ModMotionCard.AxisItems">
+	<summary>
+ AxisItem数组,将此数组是为了分配给轴卡的,定义14,是因为此机台只有15个轴
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.AxisParToDataGrid(System.Windows.Forms.DataGridView)">
+	<summary>
+ 读取到dsAxisPar这个变量,将其绑定到参数设定界面的表格
+ </summary>
+	<param name="temp"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.DataGridViewTODB">
+	<summary>
+ 保存轴参数,将DataSet对象写入到数据库中
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.AxisParToAxisItems">
+	<summary>
+ 将读取到的DataSet中的数据填充更新到AxisItems(i)数组中
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.ReadAxisPar">
+	<summary>
+ 完成读取参数所有动作(以上功能的总成)
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.InitMotionCard">
+	<summary>
+ 轴卡初始化
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ModMotionCard.Is_E_StopTrigger">
+	<summary>
+ 读取急停状态
+ </summary>
+	<returns>true表示急停中,false表示正常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_ClrSts(System.Int16,System.Int16,System.Int16)">
+	<summary>
+ 清除各轴的报警和限位
+ </summary>
+	<param name="cardnum"></param>
+	<param name="axis">1-8</param>
+	<param name="count"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_GetPrfMode(System.Int16,System.Int16,System.Int32@,System.Int16,System.UInt32@)">
+	<summary>
+ 读取轴运动模式
+ </summary>
+	<param name="cardnum"></param>
+	<param name="profile">1-8轴</param>
+	<param name="pValue"></param>
+	<param name="count"></param>
+	<param name="pClock"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_Update(System.Int16,System.Int32)">
+	<summary>
+ 启动点位运动
+ </summary>
+	<param name="cardnum"></param>
+	<param name="mask">按位指示需要启动点位运动的轴号,bit0表示1轴，bit1表示2轴，…当bit位为1时表示启动对应的轴</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_SetPos(System.Int16,System.Int16,System.Int32)">
+	<summary>
+ 设置目标位置
+ </summary>
+	<param name="cardnum"></param>
+	<param name="profile">1-8轴</param>
+	<param name="pos"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_SetVel(System.Int16,System.Int16,System.Double)">
+	<summary>
+ 设置目标速度，单位是“脉冲/毫秒”
+ </summary>
+	<param name="cardnum"></param>
+	<param name="profile">1-8轴</param>
+	<param name="vel"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_PrfTrap(System.Int16,System.Int16)">
+	<summary>
+ 设置指定轴为点位运动模式
+ </summary>
+	<param name="cardnum"></param>
+	<param name="profile">1-8轴</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_SetTrapPrm(System.Int16,System.Int16,ZhangZhilinForm.gts.TTrapPrm@)">
+	<summary>
+ 设置点位模式运动参数
+ </summary>
+	<param name="cardnum"></param>
+	<param name="profile">1-8轴</param>
+	<param name="pPrm"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.gts.GT_GetTrapPrm(System.Int16,System.Int16,ZhangZhilinForm.gts.TTrapPrm@)">
+	<summary>
+ 读取点位模式运动参数
+ </summary>
+	<param name="cardnum"></param>
+	<param name="profile">1-8轴</param>
+	<param name="pPrm"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.SubFunction.OpenShellExecute(System.String,System.String)">
+	<summary>
+ 打开外部应用程序，如果应用程序已打开，则将其显示
+ </summary>
+	<param name="path">路径名称，不包含应用文件名，如"D:\Cognex-Run\COGNEX\"</param>
+	<param name="AppName">应用程序名称，如"AlignVisSystem.exe"</param>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.ThreadTimer.iInterval">
+	<summary>
+ 设置时间
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="E:ZhangZhilinForm.ThreadTimer.Exception">
+	<summary>
+ 异常数据
+ </summary>
+	<param name="ex"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.ThreadTimer.#ctor">
+	<summary>
+ 构造函数：给属性赋初值
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmMain.btnProduction_Click(System.Object,System.EventArgs)">
+	<summary>
+ 各界面切换按钮
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmMain.Timer_UIControl_Tick(System.Object,System.EventArgs)">
+	<summary>
+ 上一步中使用的定时器
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmEngineering.Btn_Locked2_Click(System.Object,System.EventArgs)">
+	<summary>
+ 解锁1
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmEngineering.Btn_Locked1_Click(System.Object,System.EventArgs)">
+	<summary>
+ 解锁2
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmEngineering.btnS2_X_ServoOn_Click(System.Object,System.EventArgs)">
+	<summary>
+开伺服
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmEngineering.btnS2_X_ServoOff_Click(System.Object,System.EventArgs)">
+	<summary>
+ 关伺服
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmEngineering.btnS2_X_Home_Click(System.Object,System.EventArgs)">
+	<summary>
+ 回原点
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.frmEngineering.Timer_Home_Tick(System.Object,System.EventArgs)">
+	<summary>
+ 回原点定时器
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.MotionCard.MotionCardNames">
+	<summary>
+ 运动控制卡名属性
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._MotionCardName">
+	<summary>
+ 运动控制卡名属性
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._MotionCardNum">
+	<summary>
+ 运动控制卡序号
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._bolCardOpenFlag">
+	<summary>
+ 控制卡是否被打开
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._FirstAxis">
+	<summary>
+ 运动控制卡开始轴号
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._LastAxis">
+	<summary>
+ 运动控制卡结束轴号
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._AxisTotalNum">
+	<summary>
+ 运动控制卡总轴数
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._bolCardExtOpenFlag">
+	<summary>
+ 控制卡扩展模块是否被打开
+ </summary>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard._AxisItems">
+	<summary>
+ 轴参数集合
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.MotionCard.AxisPar">
+	<summary>
+ 最终传递给轴卡的运行参数的结构体
+ </summary>
+	<remarks></remarks>
+</member><member name="F:ZhangZhilinForm.MotionCard.sAxisPar">
+	<summary>
+ 最终传递给轴卡的运行参数的结构体实体
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.DecToBin(System.Int64,System.Int32)">
+	<summary>
+ 将十进制数转成二进制数
+ </summary>
+	<param name="Dec"></param>
+	<param name="num"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.DecToBin1(System.Int64)">
+	<summary>
+ 将十进制数转成二进制数
+ </summary>
+	<param name="Dec"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.MotionCardName">
+	<summary>
+ 运动控制卡名称
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.MotionCardNum">
+	<summary>
+ 运动控制卡序号0-7
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.bolCardOpenFlag">
+	<summary>
+ 运动控制卡是否打开标志位
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.FirstAxis">
+	<summary>
+ 运动控制卡开始轴号,只能设置0-7
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.LastAxis">
+	<summary>
+ 运动控制卡结束轴号,只能设置0-7
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.bolCardExtOpenFlag">
+	<summary>
+ 运动控制卡扩展模块是否打开标志位
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisTotalNum">
+	<summary>
+ 运行控制卡总轴数
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItemsAttribute">
+	<summary>
+ 轴参数集合
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="E:ZhangZhilinForm.MotionCard.Exception">
+	<summary>
+ 异常数据
+ </summary>
+	<param name="ex"></param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.#ctor(ZhangZhilinForm.MotionCard.MotionCardNames,System.Int32)">
+	<summary>
+ 构建函数
+ </summary>
+	<param name="nMotionCardName">运动控制卡名称,只能为MotionCardNames类型</param>
+	<param name="nMotionCardNum">运动控制卡号,只能设置为0-7</param>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.MotionInit(System.String)">
+	<summary>
+ 运动控制器初始化,OK返回0,NG返回其它
+ </summary>
+	<param name="CFG">.cfg文件路径带文件名</param>
+	<returns>0为执行OK,1为执行NG,nothing表示异常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.MotionExtInit(System.String)">
+	<summary>
+ 运动控制器扩展模块初始化,OK返回0,NG返回其它
+ </summary>
+	<param name="CFG">.cfg文件路径带文件名</param>
+	<returns>0为执行OK,1为执行NG,nothing表示异常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.Get_X_bit(System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ 读取单个输入点函数
+ </summary>
+	<param name="ExtMouduleNum">此轴卡中的扩展模块号,如果不是扩展模块则可以为任何数字</param>
+	<param name="i">要读取的IO点序号0-15</param>
+	<param name="IsExtMoudle">是否是扩展模块</param>
+	<returns>0表示有信号输入,1表示无信号输入,Nothing表示异常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.Get_Y_bit(System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ 读取单个输出点函数
+ </summary>
+	<param name="ExtMouduleNum">此轴卡中的扩展模块号,如果不是扩展模块则可以为任何数字</param>
+	<param name="i">要读取的IO点序号0-15</param>
+	<param name="IsExtMoudle">是否是扩展模块</param>
+	<returns>0表示有信号输出,1表示无信号输出,Nothing表示异常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.Set_Y_bit(System.Int32,System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ 置位单个输出点函数
+ </summary>
+	<param name="ExtMouduleNum">此轴卡中的扩展模块号,如果不是扩展模块则可以为任何数字</param>
+	<param name="YNum">要设置的IO点序号0-15</param>
+	<param name="value">要设置的值0表示置位,1表示复位</param>
+	<param name="IsExtMoudle">是否是扩展模块</param>
+	<returns>0为执行OK,1为执行NG</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.JogMotion(System.Int32,System.String)">
+	<summary>
+ JOG连续运动模式子程序
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<param name="Direction">方向"+" or "-"</param>
+	<returns>0为执行OK,1为执行NG</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.StepMotion(System.Int32,System.Double,System.String)">
+	<summary>
+ 功能：STEP单步运动模式子程序(因为与RealMotion函数功能重合)
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<param name="Dist">距离:单位mm</param>
+	<param name="Direction">方向"+" or "-"</param>
+	<returns>0为执行OK,1为执行NG</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.AbsMotion(System.Int32,System.Double)">
+	<summary>
+ 功能：Abs绝对运动模式子程序
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<param name="position">位置:单位mm</param>
+	<returns>0为执行OK,1为执行NG</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.RealMotion(System.Int32,System.Double)">
+	<summary>
+ 功能：Real相对运动模式子程序
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<param name="Dist">距离:单位mm,带正负号</param>
+	<returns>0为执行OK,1为执行NG</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.HomeBit(System.Int32)">
+	<summary>
+ "功能：获取原点状态"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>原点OK则返回0,原点NG则返回1</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.AxisAlarm(System.Int32)">
+	<summary>
+ 功能：获取报警状态
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>有报警返回0,无报警则返回1</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.LimitZ(System.Int32)">
+	<summary>
+ "功能：获取正极限状态"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>有限位信号返回0,无限位信号返回1</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.LimitF(System.Int32)">
+	<summary>
+ "功能：获取负极限状态"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>有负限位信号返回0,无信号则返回1</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.Get_ServoOn(System.Int32)">
+	<summary>
+ "功能：获取伺服ON/OFF状态"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>有信号则返回0,无信号则返回1,Nothing表示异常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.Set_ServoOn(System.Int32,System.Int32)">
+	<summary>
+ 功能:伺服使能开关
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<param name="value">0表示开使能,1表示关使能</param>
+	<returns>正常执行OK为0,,Nothing表示异常</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GetEncPos(System.Int32)">
+	<summary>
+ "功能：读编码器值"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>正常返回当前编码器值,异常时抛出异常信息</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GetEncPosToMM(System.Int32)">
+	<summary>
+ "功能：读编码器值,将其转换成单位为mm"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>正常返回当前编码器值单位为mm,异常时抛出异常信息</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GetPrfPos(System.Int32)">
+	<summary>
+ "功能：读取规划位置"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>正常返回当前规划位置值,异常时抛出异常信息</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GetPrfPosToMM(System.Int32)">
+	<summary>
+ "功能：读取规划位置,将其转换成单位为mm"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>正常返回当前规划位置值单位为mm,异常时抛出异常信息</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GetAxisStatus(System.Int32)">
+	<summary>
+ "功能：读取轴的运行状态32位状态字"
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>正常返回读取到的状态字,异常时抛出异常信息</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.ZSPD(System.Int32)">
+	<summary>
+ 运动到位
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>0表示运行到位,1表示还未到位,,Nothing表示异常</returns>
+	<remarks>若为步进电机,轴配置里面的encoder中的脉冲计数源配置为"脉冲计数器,Nothing表示异常"</remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.StopRun(System.Int32,System.Boolean)">
+	<summary>
+ 功能:手动停止
+ </summary>
+	<param name="AxisNum">0-7</param>
+	<param name="Smooth">平滑停止为true,紧急停止为false</param>
+	<returns>正常执行OK为0,异常为1</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.IsStop(System.Int32)">
+	<summary>
+ 功能:判断轴是否停止
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns>轴停止返回0,其它返回1</returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GoHome(System.Int32)">
+	<summary>
+ 功能:回原点,普通电机回原点
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZhangZhilinForm.MotionCard.GoHome(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ 功能:直线电机回原点
+ </summary>
+	<param name="AxisNum">轴号0-7</param>
+	<param name="IO">直线电机回原点信号点(IO点序号0-15)</param>
+	<param name="HomeIOCard">直线电机回原点信号点所属的卡号</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.AxisNum">
+	<summary>
+ 轴号
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.PulsePerRpm">
+	<summary>
+ 每转脉冲数
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.Lead">
+	<summary>
+ 丝干导程
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.Ratio">
+	<summary>
+ 齿轮减速比
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.MoveSpeed">
+	<summary>
+运行速度(mm/s)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeSpeed">
+	<summary>
+ 回零速度(mm/s)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeSpeedLow">
+	<summary>
+  回零速度低速(mm/s)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.Acc">
+	<summary>
+ 加速度(mm/s2)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.Dec">
+	<summary>
+ 减速度(mm/s2)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeOffset">
+	<summary>
+ 原点偏移量(mm)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeSearchDis">
+	<summary>
+ 原点搜索距离(mm)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeTimeout">
+	<summary>
+ 回零超时设定值:单位ms
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeDirection">
+	<summary>
+ 回零方向:只能输入"+" or "-"
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.IsRotate">
+	<summary>
+ 是否是旋转轴,true为此轴是旋转轴,false为此轴不是旋转轴
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ZhangZhilinForm.MotionCard.AxisItems.HomeRunnnig">
+	<summary>
+ 回原点中标志位,true为在回原点中,false表示未在回原点中
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.MotionCard.AxisItems">
+	<summary>
+ 轴参数基类
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.MotionCard.AxisItemsCollection">
+	<summary>
+ 轴参数基类AxisItems的集合
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.MotionCard.AxisItemsEnumerator">
+	<summary>
+ 此类只为完成AxisItemsCollection类中的某些功能
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ZhangZhilinForm.MotionCard.AxisItemsSameDimensions">
+	<summary>
+ 此类只为完成AxisItemsCollection类中的某些功能
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
